@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeni Rota Belirlendi</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <strong>Yeni Rota Belirlendi</strong>
+        <div>
+            <a href="#hakkimda">Hakkımda</a>
+            <a href="#geziler">Geziler</a>
+            <a href="#fiyat">Ödeme</a>
+            <a href="#iletisim">İletişim</a>
+            <span class="toggle" onclick="toggleDark()">🌙</span>
+        </div>
+    </div>
+</nav>
+
+<div class="hero" style="background-image:url('images/seyma-ubud.jpeg')">
+    <h1>Zülal Şeyma İBİŞ</h1>
+</div>
+
+<section id="hakkimda" class="about reveal">
+<h2>Hakkımda</h2>
+<p>Merhaba! Ben profesyonel bir gezi yazarı ve içerik üreticisiyim. Dünya genelinde farklı destinasyonları keşfediyor, markalar ve okuyucular için özgün içerikler üretiyorum.</p>
+</section>
+
+<section id="geziler" class="reveal">
+<h2>Gezi Yazıları</h2>
+<div class="cards">
+    <a href="istanbul.html" class="card"><img src="images/seyma-ubud.jpeg"><div><h3>Ubud</h3></div></a>
+    <a href="kapadokya.html" class="card"><img src="images/seyma-canggu.jpeg"><div><h3>Canggu</h3></div></a>
+    <a href="paris.html" class="card"><img src="images/seyma-istanbul.jpeg"><div><h3>İstanbul</h3></div></a>
+    <a href="paris.html" class="card"><img src="images/seyma-dikili.jpeg"><div><h3>Dikili</h3></div></a>
+    <a href="paris.html" class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Paris</h3></div></a>
+    <a href="paris.html" class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Londra</h3></div></a>
+</div>
+</section>
+
+<section id="fiyat" class="reveal">
+<h2>Ödeme Planları</h2>
+<div class="pricing">
+    <div class="pricing-card">
+        <h3>Başlangıç</h3>
+        <div class="price">₺750</div>
+        <ul>
+            <li>✔ Kısa tanıtım yazısı</li>
+            <li>✔ 1 görsel</li>
+            <li>✔ Web sitesinde yayın</li>
+        </ul>
+    </div>
+    <div class="pricing-card featured selected">
+        <h3>Profesyonel</h3>
+        <div class="price">₺1.500</div>
+        <ul>
+            <li>✔ SEO uyumlu içerik</li>
+            <li>✔ 5 profesyonel fotoğraf</li>
+            <li>✔ Sosyal medya paylaşımı</li>
+        </ul>
+    </div>
+    <div class="pricing-card" data-plan="premium" >
+        <h3>Premium</h3>
+        <div class="price">₺3.000</div>
+        <ul>
+            <li>✔ Detaylı gezi rehberi</li>
+            <li>✔ Video + fotoğraf</li>
+            <li>✔ Öne çıkan içerik</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<section id="iletisim" class="contact reveal">
+<h2>İletişim</h2>
+<form id="contact-form">
+    <input type="text" name="user_name" id="user_name" placeholder="Ad Soyad" required>
+    <input type="email" name="user_email" id="user_email" placeholder="E-posta" required>
+    <textarea name="message" id="message" rows="5" placeholder="Mesajınız" required></textarea>
+    <button type="submit" id="submit-btn">Gönder</button>
+    <div id="form-message" class="form-message"></div>
+</form>
+</section>
+
+<footer>
+© 2026 Gezi Blogum
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
