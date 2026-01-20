@@ -743,3 +743,8 @@ footer {
         font-size: 0.7rem;
     }
 }
+
+.form-description {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
