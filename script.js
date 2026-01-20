@@ -14,7 +14,21 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const navHeight = document.querySelector('nav').offsetHeight;
+        let extraOffset = 20; // üstten biraz boşluk
+        // hero section’a özel ekstra boşluk
+        if(target.id === 'hakkimda' || target.id === 'tasarim') extraOffset += 20;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - extraOffset;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
 // Initialize EmailJS - Replace with your EmailJS Public Key
 // Get your keys from: https://www.emailjs.com/
 // See EMAIL_SETUP.md for detailed instructions
@@ -111,3 +125,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
