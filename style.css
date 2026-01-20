@@ -736,7 +736,9 @@ footer {
 #tasarim li {
     margin-bottom: 10px;   /* liste elemanları arası boşluk */
 }
-html {
-    scroll-padding-top: 80px; /* navbar yüksekliğine göre ayarla */
-    scroll-behavior: smooth;  /* yumuşak scroll */
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 70px; /* mobilde navbar yüksekliğine göre */
+    }
 }
