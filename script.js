@@ -19,9 +19,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         const navHeight = document.querySelector('nav').offsetHeight;
-        let extraOffset = 20; // üstten biraz boşluk
+        let extraOffset = 10; // üstten biraz boşluk
         // hero section’a özel ekstra boşluk
-        if(target.id === 'hakkimda' || target.id === 'tasarim') extraOffset += 20;
+        if(target.id === 'hakkimda' || target.id === 'tasarim') extraOffset += 10;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - extraOffset;
         window.scrollTo({
             top: targetPosition,
@@ -125,4 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
