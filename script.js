@@ -14,7 +14,18 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // normal jump'u durdur
+        const target = document.querySelector(this.getAttribute('href'));
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10; // 10px ekstra boşluk
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
 // Initialize EmailJS - Replace with your EmailJS Public Key
 // Get your keys from: https://www.emailjs.com/
 // See EMAIL_SETUP.md for detailed instructions
