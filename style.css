@@ -65,7 +65,7 @@ body.dark nav {
 }
 
 nav strong {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: var(--text);
@@ -136,15 +136,6 @@ nav a:hover {
     position: relative;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
-}
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
@@ -740,5 +731,15 @@ footer {
 @media (max-width: 768px) {
     section {
         scroll-margin-top: 70px; /* mobilde navbar yüksekliğine göre */
+    }
+}
+
+@media (max-width: 768px) {
+    nav strong {
+        font-size: 0.8rem;
+    }
+
+    nav strong i {
+        font-size: 0.9rem;
     }
 }
