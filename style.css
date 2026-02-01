@@ -748,3 +748,203 @@ footer {
     margin-top: -10px;
     margin-bottom: 30px;
 }
+
+/* ROTA DETAIL – PROFESYONEL SIDE LAYOUT */
+.rota-list > div {
+    margin-bottom: -100px;
+}
+
+.rota-list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin-top: 90px;
+}
+
+.rota-item {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.rota-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.rota-image {
+    flex: 1;
+}
+
+.rota-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: var(--shadow-lg);
+}
+
+.rota-image2 {
+    flex: 1;
+}
+
+.rota-image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow:
+    var(--shadow-lg);
+}
+.rota-image3 {
+    flex: 1;
+}
+
+.rota-image3 img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow:
+    var(--shadow-lg);
+}
+.rota-image4 {
+    flex: 1;
+}
+
+.rota-image4 img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow:
+    var(--shadow-lg);
+}
+.rota-text {
+    flex: 1;
+}
+
+.rota-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+.rota-text p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: var(--text);
+}
+
+/* MOBİL */
+@media (max-width: 768px) {
+    .rota-list {
+        gap: 70px;
+    }
+
+    .rota-item,
+    .rota-item.reverse {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .rota-image img {
+        height: 260px;
+    }
+
+    .rota-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .rota-text p {
+        font-size: 1rem;
+    }
+}
+
+.editorial-hero {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+}
+
+.editorial-image {
+    position: relative;
+    height: 650px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* Resim */
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Alt fade (örnekteki silik alan) */
+.editorial-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 35%,
+        rgba(0,0,0,0.25) 60%,
+        rgba(255,255,255,0.95) 100%
+    );
+}
+
+/* Yazı alanı */
+.editorial-content {
+    margin-top: 40px;   /* yazıları aşağı indirir */
+    text-align: center;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    padding: 100 48px;
+    z-index: 2;
+}
+
+.editorial-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.editorial-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .editorial-image {
+        height: 420px;
+        border-radius: 0;
+    }
+
+    .editorial-content {
+        bottom: 40px;
+    }
+
+    .editorial-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .editorial-content p {
+        font-size: 0.95rem;
+    }
+}
+
+
+.post-content h2 {
+    
+    font-size: 2rem;
+    
+}
